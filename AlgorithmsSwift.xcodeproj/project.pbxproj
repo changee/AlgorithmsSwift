@@ -13,9 +13,9 @@
 		9E8A06CE19E666840058103D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E8A06CC19E666840058103D /* Main.storyboard */; };
 		9E8A06DA19E666850058103D /* AlgorithmsSwiftTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8A06D919E666850058103D /* AlgorithmsSwiftTests.swift */; };
 		9E8A06E419E6676A0058103D /* NavListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8A06E319E6676A0058103D /* NavListCell.swift */; };
-		9E8A06ED19E667C90058103D /* ASCommonDivisor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8A06EB19E667C90058103D /* ASCommonDivisor.swift */; };
-		9E8A06EE19E667C90058103D /* ASCommonDivisor.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E8A06EC19E667C90058103D /* ASCommonDivisor.xib */; };
 		9E8A06F019E6690F0058103D /* NavData.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9E8A06EF19E6690F0058103D /* NavData.plist */; };
+		9E8A071A19E684F90058103D /* BasicOperation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8A071819E684F90058103D /* BasicOperation.swift */; };
+		9E8A071B19E684F90058103D /* BasicOperation.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E8A071919E684F90058103D /* BasicOperation.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,9 +39,9 @@
 		9E8A06D819E666850058103D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E8A06D919E666850058103D /* AlgorithmsSwiftTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlgorithmsSwiftTests.swift; sourceTree = "<group>"; };
 		9E8A06E319E6676A0058103D /* NavListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NavListCell.swift; sourceTree = "<group>"; };
-		9E8A06EB19E667C90058103D /* ASCommonDivisor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASCommonDivisor.swift; sourceTree = "<group>"; };
-		9E8A06EC19E667C90058103D /* ASCommonDivisor.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ASCommonDivisor.xib; sourceTree = "<group>"; };
 		9E8A06EF19E6690F0058103D /* NavData.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = NavData.plist; sourceTree = "<group>"; };
+		9E8A071819E684F90058103D /* BasicOperation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicOperation.swift; sourceTree = "<group>"; };
+		9E8A071919E684F90058103D /* BasicOperation.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BasicOperation.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,8 +123,8 @@
 		9E8A06EA19E667C90058103D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				9E8A06EB19E667C90058103D /* ASCommonDivisor.swift */,
-				9E8A06EC19E667C90058103D /* ASCommonDivisor.xib */,
+				9E8A071819E684F90058103D /* BasicOperation.swift */,
+				9E8A071919E684F90058103D /* BasicOperation.xib */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -209,7 +209,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9E8A06EE19E667C90058103D /* ASCommonDivisor.xib in Resources */,
+				9E8A071B19E684F90058103D /* BasicOperation.xib in Resources */,
 				9E8A06CB19E666830058103D /* Images.xcassets in Resources */,
 				9E8A06F019E6690F0058103D /* NavData.plist in Resources */,
 				9E8A06CE19E666840058103D /* Main.storyboard in Resources */,
@@ -231,8 +231,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E8A06C919E666820058103D /* ViewController.swift in Sources */,
-				9E8A06ED19E667C90058103D /* ASCommonDivisor.swift in Sources */,
 				9E8A06C719E666820058103D /* AppDelegate.swift in Sources */,
+				9E8A071A19E684F90058103D /* BasicOperation.swift in Sources */,
 				9E8A06E419E6676A0058103D /* NavListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,6 +421,7 @@
 				9E8A06DF19E666850058103D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		9E8A06E019E666850058103D /* Build configuration list for PBXNativeTarget "AlgorithmsSwiftTests" */ = {
 			isa = XCConfigurationList;
@@ -429,6 +430,7 @@
 				9E8A06E219E666850058103D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -4,9 +4,9 @@
 <array>
 	<dict>
 		<key>title</key>
-		<string>公约数</string>
+		<string>基本运算</string>
 		<key>class</key>
-		<string>ASCommonDivisor</string>
+		<string>BasicOperation</string>
 	</dict>
 	<dict>
 		<key>title</key>
