@@ -10,9 +10,9 @@
 	</dict>
 	<dict>
 		<key>title</key>
-		<string></string>
+		<string>排序</string>
 		<key>class</key>
-		<string></string>
+		<string>Sort</string>
 	</dict>
 </array>
 </plist>
