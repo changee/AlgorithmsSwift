@@ -20,6 +20,7 @@ class NavListCell: NSView {
         textLabel?.backgroundColor = NSColor.clearColor()
         textLabel?.bordered = false
         textLabel?.editable = false
+        textLabel?.textColor = NSColor.lightGrayColor()
         self.addSubview(textLabel!)
 //        [_listTextField setDrawsBackground:YES];
 //        [_listTextField.cell setUsesSingleLineMode:YES];
