@@ -7,14 +7,60 @@
 //
 
 import Cocoa
-
+@objc(Sort)
 class Sort: NSViewController {
+    @IBOutlet weak var inputTextField: NSTextField!
+    @IBOutlet weak var resultOutput: NSTextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
     }
-//    QuickSort
+    
+    func getInputNumbers() -> [AnyObject]
+    {
+        let inputString = inputTextField.stringValue
+//        NSString componentsSeparate
+        var strings:[String] = inputString.componentsSeparatedByString(",")
+        if strings.count <= 0
+        {
+            strings = inputString.componentsSeparatedByString("，")
+        }
+
+        var numbers = NSMutableArray()
+        for str:String in strings
+        {
+            numbers.addObject(str.toInt()!)
+        }
+        
+        return numbers
+    }
+    
+    @IBAction func BubbleSort(sender: AnyObject) {
+        var nums = getInputNumbers() as [Int]
+        println(nums)
+
+        for var i=0 ; i < nums.count; i++
+        {
+            for var j = 1 ; j < nums.count - i; j++
+            {
+                if nums[j] > nums[j-1]
+                {
+//                    nums[j] = nums[j] + nums[j-1]
+//                    nums[j-1] = nums[j] - nums[j-1]
+//                    nums[j] = nums[j] - nums[j-1]
+                    nums[j]   ^= nums[j-1]
+                    nums[j-1] ^= nums[j]
+                    nums[j]   ^= nums[j-1]
+                }
+            }
+        }
+
+        var sortResult:NSArray = nums as NSArray
+        self.resultOutput.stringValue = sortResult.componentsJoinedByString(">")
+        
+    }
+    
 }
 
 
