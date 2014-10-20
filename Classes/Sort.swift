@@ -19,16 +19,14 @@ class Sort: ASViewController {
     func getInputNumbers() -> [AnyObject]
     {
         let inputString = inputTextField.stringValue
-        var strings:[String] = inputString.componentsSeparatedByString(",")
-        if strings.count <= 0
-        {
-            strings = inputString.componentsSeparatedByString("，")
-        }
+        var strings:[String] = inputString.componentsSeparatedByString(" ")
 
         var numbers = NSMutableArray()
         for str:String in strings
         {
-            numbers.addObject(str.toInt()!)
+            if let intObj = str.toInt(){
+                numbers.addObject(intObj)
+            }
         }
         
         return numbers
