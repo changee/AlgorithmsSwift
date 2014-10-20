@@ -9,10 +9,9 @@
 import Cocoa
 @objc(BasicOperation)
 
-class BasicOperation: NSViewController {
+class BasicOperation: ASViewController {
     @IBOutlet weak var num1: NSTextField!
     @IBOutlet weak var num2: NSTextField!
-    @IBOutlet weak var result: NSTextField!
     
     
     override func viewDidLoad() {
@@ -22,7 +21,7 @@ class BasicOperation: NSViewController {
     
     
     @IBAction func commonDivisor(sender: AnyObject) {
-        result.integerValue = commonDivisor(max(num1.integerValue, num2.integerValue), smaller: min(num1.integerValue, num2.integerValue))
+        self.mainViewController.printlnResult(commonDivisor(max(num1.integerValue, num2.integerValue), smaller: min(num1.integerValue, num2.integerValue)))
     }
     func commonDivisor(bigger: Int, smaller: Int) ->Int
     {

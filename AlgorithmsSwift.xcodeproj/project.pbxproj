@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E3781B519F4B48D00CD05D6 /* ASViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3781B319F4B48D00CD05D6 /* ASViewController.swift */; };
+		9E3781B619F4B48D00CD05D6 /* ASViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E3781B419F4B48D00CD05D6 /* ASViewController.xib */; };
 		9E8A06C719E666820058103D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8A06C619E666820058103D /* AppDelegate.swift */; };
 		9E8A06C919E666820058103D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E8A06C819E666820058103D /* ViewController.swift */; };
 		9E8A06CB19E666830058103D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9E8A06CA19E666830058103D /* Images.xcassets */; };
@@ -31,6 +33,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9E3781B319F4B48D00CD05D6 /* ASViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ASViewController.swift; sourceTree = "<group>"; };
+		9E3781B419F4B48D00CD05D6 /* ASViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ASViewController.xib; sourceTree = "<group>"; };
 		9E8A06C119E666820058103D /* AlgorithmsSwift.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AlgorithmsSwift.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E8A06C519E666820058103D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E8A06C619E666820058103D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,10 +70,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E3781B719F4BF2B00CD05D6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9E8A06CC19E666840058103D /* Main.storyboard */,
+				9E8A06E319E6676A0058103D /* NavListCell.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		9E8A06B819E666810058103D = {
 			isa = PBXGroup;
 			children = (
-				9E8A06EF19E6690F0058103D /* NavData.plist */,
 				9E8A06EA19E667C90058103D /* Classes */,
 				9E8A06C319E666820058103D /* AlgorithmsSwift */,
 				9E8A06D619E666850058103D /* AlgorithmsSwiftTests */,
@@ -89,11 +101,10 @@
 		9E8A06C319E666820058103D /* AlgorithmsSwift */ = {
 			isa = PBXGroup;
 			children = (
-				9E8A06E319E6676A0058103D /* NavListCell.swift */,
+				9E3781B719F4BF2B00CD05D6 /* View */,
 				9E8A06C619E666820058103D /* AppDelegate.swift */,
 				9E8A06C819E666820058103D /* ViewController.swift */,
 				9E8A06CA19E666830058103D /* Images.xcassets */,
-				9E8A06CC19E666840058103D /* Main.storyboard */,
 				9E8A06C419E666820058103D /* Supporting Files */,
 			);
 			path = AlgorithmsSwift;
@@ -127,10 +138,13 @@
 		9E8A06EA19E667C90058103D /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				9E8A06EF19E6690F0058103D /* NavData.plist */,
 				9E8A071C19E688080058103D /* Sort.swift */,
 				9E8A071D19E688090058103D /* Sort.xib */,
 				9E8A071819E684F90058103D /* BasicOperation.swift */,
 				9E8A071919E684F90058103D /* BasicOperation.xib */,
+				9E3781B319F4B48D00CD05D6 /* ASViewController.swift */,
+				9E3781B419F4B48D00CD05D6 /* ASViewController.xib */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -219,6 +233,7 @@
 				9E8A071F19E688090058103D /* Sort.xib in Resources */,
 				9E8A06CB19E666830058103D /* Images.xcassets in Resources */,
 				9E8A06F019E6690F0058103D /* NavData.plist in Resources */,
+				9E3781B619F4B48D00CD05D6 /* ASViewController.xib in Resources */,
 				9E8A06CE19E666840058103D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,6 +256,7 @@
 				9E8A06C719E666820058103D /* AppDelegate.swift in Sources */,
 				9E8A071A19E684F90058103D /* BasicOperation.swift in Sources */,
 				9E8A071E19E688090058103D /* Sort.swift in Sources */,
+				9E3781B519F4B48D00CD05D6 /* ASViewController.swift in Sources */,
 				9E8A06E419E6676A0058103D /* NavListCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

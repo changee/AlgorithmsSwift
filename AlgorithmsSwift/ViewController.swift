@@ -17,6 +17,9 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
     var contentView:NSView?
     var contentController:NSViewController?
     
+    @IBOutlet var consoleTextView: NSTextView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -39,9 +42,37 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
         // Update the view, if already loaded.
         }
     }
+
+    func tableViewSelectionDidChange(notification: NSNotification!)
+    {
+        let className: AnyObject? = (navDataList![tableView!.selectedRow] as NSDictionary)["class"]
+        let ClassName:AnyClass = NSClassFromString(className as String)
+        contentController = (ClassName as NSViewController.Type)(nibName: className as String, bundle: nil)
+        (contentController as ASViewController).mainViewController = self
+        showContentView(contentController!.view)
+    }
     
     
-    // pragma
+    func showContentView(view:NSView){
+        contentView?.removeFromSuperview()
+        contentView = view;
+        contentView?.frame = self.contentViewWrapper.frame
+        contentView?.frame.origin.x = 0
+        contentView?.frame.origin.y = 0
+        self.contentViewWrapper?.addSubview(contentView!)
+        
+    }
+    
+    func printlnResult(result:AnyObject){
+        consoleTextView.string = result.stringValue
+    }
+    
+    func printlnResult(result:String){
+        consoleTextView.string = result
+    }
+    
+    
+//  table delegate
     func tableView(tableView: NSTableView!, viewForTableColumn tableColumn: NSTableColumn!, row: Int) -> NSView!
     {
         if tableColumn.identifier == "myCell"
@@ -62,25 +93,6 @@ class ViewController: NSViewController, NSTableViewDataSource, NSTableViewDelega
     {
         return 44
     }
-
-
-    func tableViewSelectionDidChange(notification: NSNotification!)
-    {
-        let className: AnyObject? = (navDataList![tableView!.selectedRow] as NSDictionary)["class"]
-        let ClassName:AnyClass = NSClassFromString(className as String)
-        contentController = (ClassName as NSViewController.Type)(nibName: className as String, bundle: nil)
-        showContentView(contentController!.view)
-    }
-    
-    func showContentView(view:NSView){
-        contentView?.removeFromSuperview()
-        contentView = view;
-        contentView?.frame = self.contentViewWrapper.frame
-        contentView?.frame.origin.x = 0
-        self.contentViewWrapper?.addSubview(contentView!)
-    }
-    
-    
 }
 
 

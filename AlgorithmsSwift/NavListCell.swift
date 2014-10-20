@@ -22,10 +22,6 @@ class NavListCell: NSView {
         textLabel?.editable = false
         textLabel?.textColor = NSColor.lightGrayColor()
         self.addSubview(textLabel!)
-//        [_listTextField setDrawsBackground:YES];
-//        [_listTextField.cell setUsesSingleLineMode:YES];
-//        [_listTextField setTextColor:[NSColor whiteColor]];
-        
     }
 
     required init(coder: NSCoder) {

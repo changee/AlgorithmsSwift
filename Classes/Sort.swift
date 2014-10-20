@@ -8,9 +8,8 @@
 
 import Cocoa
 @objc(Sort)
-class Sort: NSViewController {
+class Sort: ASViewController {
     @IBOutlet weak var inputTextField: NSTextField!
-    @IBOutlet weak var resultOutput: NSTextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +19,6 @@ class Sort: NSViewController {
     func getInputNumbers() -> [AnyObject]
     {
         let inputString = inputTextField.stringValue
-//        NSString componentsSeparate
         var strings:[String] = inputString.componentsSeparatedByString(",")
         if strings.count <= 0
         {
@@ -38,7 +36,6 @@ class Sort: NSViewController {
     
     @IBAction func BubbleSort(sender: AnyObject) {
         var nums = getInputNumbers() as [Int]
-        println(nums)
 
         for var i=0 ; i < nums.count; i++
         {
@@ -57,8 +54,7 @@ class Sort: NSViewController {
         }
 
         var sortResult:NSArray = nums as NSArray
-        self.resultOutput.stringValue = sortResult.componentsJoinedByString(">")
-        
+        self.mainViewController.printlnResult(sortResult.componentsJoinedByString(">"))
     }
     
 }
