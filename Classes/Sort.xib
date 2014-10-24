@@ -41,8 +41,18 @@
                         <font key="font" size="13" name="STHeitiSC-Light"/>
                     </buttonCell>
                 </button>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gpf-TC-HUo">
+                    <rect key="frame" x="106" y="188" width="92" height="32"/>
+                    <buttonCell key="cell" type="push" title="快速排序" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="eHY-li-npd">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" size="13" name="STHeitiSC-Light"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="QuickSort:" target="-2" id="W2N-Er-ivX"/>
+                    </connections>
+                </button>
             </subviews>
-            <point key="canvasLocation" x="117" y="251"/>
+            <point key="canvasLocation" x="-194" y="277"/>
         </customView>
     </objects>
 </document>

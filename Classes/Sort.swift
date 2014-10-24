@@ -34,10 +34,10 @@ class Sort: ASViewController {
     
     @IBAction func BubbleSort(sender: AnyObject) {
         var nums = getInputNumbers() as [Int]
-
-        for var i=0 ; i < nums.count; i++
+        let numCount = nums.count
+        for var i=0 ; i < numCount; i++
         {
-            for var j = 1 ; j < nums.count - i; j++
+            for var j = 1 ; j < numCount - i; j++
             {
                 if nums[j] > nums[j-1]
                 {
@@ -52,7 +52,48 @@ class Sort: ASViewController {
         }
 
         var sortResult:NSArray = nums as NSArray
-        self.mainViewController.printlnResult(sortResult.componentsJoinedByString(">"))
+        self.mainViewController.printlnResult(sortResult.componentsJoinedByString(" > "))
+    }
+    
+    @IBAction func QuickSort(sender: AnyObject) {
+        var nums:NSMutableArray = NSMutableArray(array: getInputNumbers() as [Int])
+        println(nums)
+        sortNums(nums, left: 0, right: nums.count-1)
+        println(nums)
+    }
+    
+    func sortNums(targetNums:NSMutableArray, left:Int, right:Int){
+//        var targetNums = nums;
+        var leftCur = left;
+        
+        if leftCur < right {
+            let currentValue = targetNums[leftCur].integerValue;
+            var currentRight = right;
+            
+            while (leftCur < currentRight){
+                while (leftCur < currentRight && targetNums[currentRight].integerValue >= currentValue){
+                    --currentRight;
+                }
+                if(leftCur < currentRight)
+                {
+                    targetNums[left] = targetNums[currentRight];
+                    ++leftCur;
+                }
+                
+                while(leftCur < currentRight && targetNums[left].integerValue <= currentValue){
+                    ++leftCur
+                }
+                if(leftCur < currentRight){
+                    targetNums[currentRight] = targetNums[leftCur];
+                    --currentRight;
+                }
+                
+            }
+
+        targetNums[leftCur] = currentValue;
+        sortNums(targetNums, left: 0, right: leftCur - 1)
+        sortNums(targetNums, left: leftCur + 1, right: right)
+        }
     }
     
 }
@@ -72,26 +113,6 @@ BubbleSort
 
 设数组长度为N。
 
-1．比较相邻的前后二个数据，如果前面数据大于后面的数据，就将二个数据交换。
-
-2．这样对数组的第0个数据到N-1个数据进行一次遍历后，最大的一个数据就“沉”到数组第N-1个位置。
-
-3．N=N-1，如果N不为0就重复前面二步，否则排序完成。
-
-
-
-按照定义很容易写出代码：
-
-[cpp] view plaincopy
-//冒泡排序1
-void BubbleSort1(int a[], int n)
-{
-int i, j;
-for (i = 0; i < n; i++)
-for (j = 1; j < n - i; j++)
-if (a[j - 1] > a[j])
-Swap(a[j - 1], a[j]);
-}
 
 下面对其进行优化，设置一个标志，如果这一趟发生了交换，则为true，否则为false。明显如果有一趟没有发生交换，说明排序已经完成。
 
